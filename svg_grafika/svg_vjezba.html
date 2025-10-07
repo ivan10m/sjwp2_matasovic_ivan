@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SVG grafika</title>
     <style>
-        table, td {
+        table, td, th {
             border: 1px solid black;
+            text-align: center;
+            border-collapse: collapse;
         }
     </style>
 </head>
@@ -18,7 +20,51 @@
         <polygon points="300,10 350,190 250,190" style="fill:lime;stroke:purple;stroke-width:3" />
     </svg>
     <br>
-    <h2>Tablice u HTML-u</h2>
+    <h3>Tablice</h3>
+    <table>
+        <tr>
+            <th>Ime</th>
+            <th>Prezime</th>
+            <th>Razred</th>
+        </tr>
+        <tr>
+            <td>Petar</td>
+            <td>Simić</td>
+            <td>3.E</td>
+        </tr>
+        <tr>
+            <td>Ivo</td>
+            <td>Horvat</td>
+            <td>4.A</td>
+        </tr>
+    </table>
+
+    <h3>Forme u HTML-u</h3>
+    <form action="#" method="get">
+        <label for="ime">Ime:</label>
+        <input type="text" id="ime" required> <br>
+        <label for="prezime">Prezime:</label>
+        <input type="text" id="prezime"> <br>
+        <input type="submit" value="Pošalji">
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!--  <h2>Tablice u HTML-u</h2>
     <table>
         <tr>
             <td>Firma</td>
@@ -46,7 +92,7 @@
         <label for="prezime">Prezime:</label>
         <input type="text" id="prezime"> <br>
         <input type="submit" value="Pošalji">
-    </form>
+    </form> -->
 
 </body>
 </html>
