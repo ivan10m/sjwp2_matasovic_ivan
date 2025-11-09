@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Semafor</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .traffic-light {
+    width: 100px;
+    background: #222;
+    padding: 15px;
+    border-radius: 20px;
+    margin: 0 auto;
+  }
+
+  .light {
+    width: 60px;
+    height: 60px;
+    background: #555;
+    border-radius: 50%;
+    margin: 10px auto;
+    transition: background 0.3s;
+  }
+
+  .red.active { background: red; }
+  .yellow.active { background: yellow; }
+  .green.active { background: limegreen; }
+
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Traffic Light Simulator</h1>
+
+<div class="traffic-light">
+  <div id="red" class="light red"></div>
+  <div id="yellow" class="light yellow"></div>
+  <div id="green" class="light green"></div>
+</div>
+
+<button onclick="startLight()">Start</button>
+
+<script>
+  let state = 0;
+  let timer;
+
+  function changeLight() {
+    // Dohvati svjetla
+    let red = document.getElementById("red");
+    let yellow = document.getElementById("yellow");
+    let green = document.getElementById("green");
+
+    // Ugasiti sve
+    red.classList.remove("active");
+    yellow.classList.remove("active");
+    green.classList.remove("active");
+
+    // Upali prema stanju
+    if (state < 2) red.classList.add("active");
+    else if (state === 2) {
+        yellow.classList.add("active");
+        red.classList.add("active");
+    }
+    else if (state === 3) green.classList.add("active");
+
+    // Prijeđi na sljedeće stanje
+    state = (state + 1) % 4;
+  }
+
+  function startLight() {
+    clearInterval(timer); // da se ne pokrene dvaput
+    state = 0;
+    changeLight();
+    timer = setInterval(changeLight, 1000); // mijenja boju svake sekunde
+  }
+</script>
+
+</body>
+</html>

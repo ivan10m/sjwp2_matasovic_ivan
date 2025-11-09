@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pogodi broj</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2rem; max-width: 480px; margin: auto; }
+    input[type="number"] { width: 6rem; padding: .25rem; }
+    button { padding: .4rem .8rem; margin-left: .5rem; }
+    #msg { margin-top: 1rem; font-weight: 600; }
+    #attempts { color: #555; margin-top: .5rem; }
+  </style>
+</head>
+<body>
+  <h1>Pogodi broj (1–100)</h1>
+
+  <form id="gameForm">
+    <label for="guess">Unesi broj:</label>
+    <input id="guess" type="number" min="1" max="100" required>
+    <button id="checkBtn" type="submit">Pogodi</button>
+    <button id="newBtn" type="button">Nova igra</button>
+  </form>
+
+  <div id="msg"></div>
+  <div id="attempts"></div>
+  <script src="./index.js"></script>
+</body>
+</html>
