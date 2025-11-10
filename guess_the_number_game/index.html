@@ -15,15 +15,15 @@
 <body>
   <h1>Pogodi broj (1–100)</h1>
 
-  <form id="gameForm">
+  <form id="gameForm" onsubmit="checkNumber(event)">
     <label for="guess">Unesi broj:</label>
-    <input id="guess" type="number" min="1" max="100" required>
-    <button id="checkBtn" type="submit">Pogodi</button>
-    <button id="newBtn" type="button">Nova igra</button>
+    <input id="guess" type="number" min="1" max="101" required>
+    <button type="submit">Pogodi</button>
+    <button type="button" onclick="newGame()">Nova igra</button>
   </form>
 
   <div id="msg"></div>
   <div id="attempts"></div>
-  <script src="./index.js"></script>
+  <script src="./index2.js"></script>
 </body>
 </html>
