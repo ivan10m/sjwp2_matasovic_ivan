@@ -1,10 +1,14 @@
 
-let randomNumber1 = Math.floor(Math.random()*6)+1;
+function randomNumber() {
+    return Math.floor(Math.random()*6)+1;
+}
+
+let randomNumber1 = randomNumber();
 let randomImageSource1 = "./images/dice" + randomNumber1 + ".png";
 document.querySelectorAll("img")[0].setAttribute("src", randomImageSource1);
 //console.log(randomNumber1);
 
-let randomNumber2 = Math.floor(Math.random()*6)+1;
+let randomNumber2 = randomNumber();
 let randomImageSource2 = "./images/dice" + randomNumber2 + ".png";
 document.querySelectorAll("img")[1].setAttribute("src", randomImageSource2);
 
