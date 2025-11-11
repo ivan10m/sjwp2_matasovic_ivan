@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number game</title>
+</head>
+<body>
+    <h1>Pogodi broj: </h1>
+
+    <form id="gameForm" onsubmit="checkNumber(event)">
+        <label for="guess">Unesi broj:</label>
+        <input id="guess" type="number" max="100" min="1" required>
+        <button type="submit">Pogodi</button>
+        <button type="button" onclick="newGame()">Nova igra</button>
+    </form>
+
+    <div id="msg"></div>
+    <div id="attempts"></div>
+    <script src="./grupab.js"></script>
+</body>
+</html>
