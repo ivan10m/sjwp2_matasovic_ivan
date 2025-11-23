@@ -1,0 +1,21 @@
+document.getElementsByTagName ("p");                            //sve p elemente dohvaća u polje
+document.getElementsByTagName ("p")[1].style.color = "red";   //samo drugi p element mijenja boju u crveno
+document.getElementsByClassName("klasa1");                      //odabire sve elemente s klasom pod imenom klasa1 u polje
+document.getElementsByClassName("klasa1")[0]
+document.getElementById("naslov");                          //odabir prema ID-ju
+document.querySelector("#naslov")                           //odabir isto prema ID, mora se staviti # ispred. Isto tako može prema klasi ".klasa"
+document.querySelectorAll(".klasa1")                         //odabire sve elemente s klasom pod imenom klasa1
+
+// dodavanje i micanje klase
+izabrati element.classList.add("nova_klasa")
+ili
+izabrati element.classList.remove("nova_klasa") 
+
+//text manipulacija
+document.querySelector("h1").innerHTML ="<strong>Naslov 1</strong>"; 
+ili
+document.querySelector("h1").textContent ="Naslov 1"; 
+
+//manipulacija atributa
+document.querySelector("a").getAttribute("href");
+document.querySelector("a").setAttribute("href", "https://bing.com");
